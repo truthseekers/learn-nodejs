@@ -1,0 +1,28 @@
+html
+    head
+        title= title
+    body
+        h1= message
+        h2 simple static unordered list
+        ul
+            li item 1
+            li item 2
+            li item 3
+
+        h2 dynamic list
+        ul
+            each product in products
+                li= product.title
+
+        h2 dynamic clickable list
+        ul
+            each product in products
+                a(href='//localhost:3000/test')
+                    li= product.title
+
+        h2 clickable list with dynamic links
+        ul
+            each product in products
+                - var urlParam= product.id
+                a(href='//localhost:3000/product/' + urlParam)
+                    li= product.title

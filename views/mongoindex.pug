@@ -1,0 +1,33 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    h2 simple static unordered list
+    ul
+        li item 1
+        li item 2
+        li item 3
+    h2 dynamic list
+    ul
+        each kitten in kittens
+            li= kitten.name
+    h2 dynamic clickable list
+    ul
+        each kitten in kittens
+            a(href='//localhost:3000/test')
+                li= kitten.name
+    h2 clickable list with dynamic links
+    ul
+        each kitten in kittens
+            - var urlParam= kitten.id
+            a(href='//localhost:3000/kitten/' + urlParam)
+                li= kitten.name
+    h2 NEW kitten:
+    form(role='form' method='post'
+    action='http://localhost:3000/newKitten/')
+        label(for='name') name:
+        input(type='text', placeholder='name' name="name")
+        label(for='furColor') color:
+        input(type='text', placeholder='fur Color' name="furColor")
+        button(type="submit") Submit

@@ -1,0 +1,35 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello-world-one": "nodemon hello-world-one/app.js",
+    "hello-express-two": "nodemon hello-express-two/app.js",
+    "get-requests-three": "nodemon get-requests-three/app.js",
+    "importing-exporting-four": "nodemon importing-exporting-four/app.js",
+    "html-in-node-five": "nodemon html-in-node-five/app.js",
+    "post-request-json-db-six": "nodemon post-request-json-db-six/app.js",
+    "env-seven": "nodemon env-seven/app.js",
+    "pug-views-eight": "nodemon pug-views-eight/app.js",
+    "middleware-nine": "nodemon middleware-nine/app.js",
+    "error-handling-ten": "nodemon error-handling-ten/app.js",
+    "custom-error-eleven": "nodemon custom-error-eleven/app.js",
+    "connect-to-mongo-twelve": "nodemon connect-to-mongo-twelve/app.js",
+    "connect-to-sql-thirteen": "nodemon connect-to-sql-thirteen/app.js",
+    "using-sequelize-fourteen": "nodemon using-sequelize-fourteen/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.25.8"
+  }
+}

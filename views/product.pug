@@ -1,0 +1,25 @@
+html
+  head
+    title= product.title
+  body
+    h2 product details
+    p name: #{product.title} on ya table
+    p price: #{product.price}
+    p color: #{product.color}
+
+    h2 update product:
+    form(role='form' method='post'
+    action='http://localhost:3000/product/')
+        input(type="hidden" name='id' value=product.id)
+        label(for='title') title:
+        input(type='text', placeholder='title' name="title")
+        label(for='color') color:
+        input(type='text', placeholder='color' name="color")
+        label(for='price') price:
+        input(type='text', placeholder='price' name="price")
+        label(for='category') category:
+        input(type='text', placeholder='category' name="category")
+        button(type="submit") Submit
+
+    h2
+      a(href='//localhost:3000/') Go back to products page

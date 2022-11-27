@@ -1,0 +1,23 @@
+html
+  head
+    title all the kittens!
+  body
+    h2 kitten details
+    p Where da cat: #{kitten.name} on ya table
+
+    h2 update kitten:
+    form(role='form' method='post'
+    action='http://localhost:3000/product/')
+        input(type="hidden" name='id' value=kitten.id)
+        label(for='title') title:
+        input(type='text', placeholder='title' name="title")
+        label(for='color') color:
+        input(type='text', placeholder='color' name="color")
+        label(for='price') price:
+        input(type='text', placeholder='price' name="price")
+        label(for='category') category:
+        input(type='text', placeholder='category' name="category")
+        button(type="submit") Submit
+
+    h2
+      a(href='//localhost:3000/') Go back to products page
